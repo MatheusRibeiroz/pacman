@@ -94,7 +94,7 @@ public class Game extends JFrame implements KeyListener {
 	}
 
 	private void run() {
-		while (!player.getLife() < 1) {
+		while (player.getLife() > 0) {
 			// Quando a vida for maior que zero e se a função de botão pressionado estiver em true, então o player ira poder se mover
 			if(paracima == true){
 				player.mover();
