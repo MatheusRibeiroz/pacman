@@ -108,35 +108,7 @@ public class Game extends JFrame implements KeyListener {
 			if(paradireita == true){
 				player.mover();
 			}           
-			//Métodos de colisão 
-			if(!player.isInvencivel() && player.colisao(ghost1) || player.colisao(ghost2) || player.colisao(ghost3) || player.colisao(ghost4) || player.colisao(bomb)) {        
-				System.out.println("Voce recebeu dano e perdeu uma vida.");
-				Dano();
-				
-			}        
-			if(player.colisao(booster) && booster.isVisivel()) {
-				System.out.println("Booster ativado");
-				player.setInvencivel(true);
-				booster.setVisivel(false);
-			}
-            
-			ghost1.Movimentacao();
-			ghost2.Movimentacao();
-			ghost3.Movimentacao();
-			ghost4.Movimentacao();
 			
-			
-			if(!booster.isVisivel()) {
-				booster.setTurno(booster.getTurno() - 1);
-				if(booster.getTurno() == 0) {
-					booster.setVisivel(true);
-					player.setInvencivel(false);
-					booster.setTurno((int)(Math.random()*100)+45);
-					
-				}
-				
-				
-			}
 			
 			try {
 				Thread.sleep(speed);
@@ -183,31 +155,8 @@ public class Game extends JFrame implements KeyListener {
 	if (c == '4' || c == 'a') paraesquerda = false;	
 	}
 	
-	private void resetarPosicao() {
-		player.setX(255);
-		player.setY(255);
-		ghost1.setX(0);
-		ghost1.setY(0);
-		ghost2.setX(400);
-		ghost2.setY(0);
-		ghost3.setX(0);
-		ghost3.setY(400);
-		ghost4.setX(400);
-		ghost4.setY(400);
-		bomb.setX(100);
-		bomb.setY(100);
-		booster.setX(200);
-		booster.setY(200);
-	}
 	
-	private void Dano() {
-		if(!player.isInvencivel()) {
-			player.setLife(player.getLife() - 1);
-			resetarPosicao();
-		}
 	
-			
-	}
 	
 }  
 
