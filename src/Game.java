@@ -94,7 +94,7 @@ public class Game extends JFrame implements KeyListener {
 	}
 
 	private void run() {
-		while (player.getLife() > 0) {
+		while (!player.getLife() < 1) {
 			// Quando a vida for maior que zero e se a função de botão pressionado estiver em true, então o player ira poder se mover
 			if(paracima == true){
 				player.mover();
@@ -110,7 +110,7 @@ public class Game extends JFrame implements KeyListener {
 			}           
 			//Métodos de colisão 
 			if(!player.isInvencivel() && player.colisao(ghost1) || player.colisao(ghost2) || player.colisao(ghost3) || player.colisao(ghost4) || player.colisao(bomb)) {        
-				System.out.println("Voce recebeu dano e perdeu uma vida. Tempo em milissegundos:  "+System.currentTimeMillis());
+				System.out.println("Voce recebeu dano e perdeu uma vida.");
 				Dano();
 				
 			}        
@@ -184,20 +184,20 @@ public class Game extends JFrame implements KeyListener {
 	}
 	
 	private void resetarPosicao() {
-		player.setX(275);
-		player.setY(275);
+		player.setX(255);
+		player.setY(255);
 		ghost1.setX(0);
 		ghost1.setY(0);
-		ghost2.setX(500);
+		ghost2.setX(400);
 		ghost2.setY(0);
 		ghost3.setX(0);
-		ghost3.setY(500);
-		ghost4.setX(500);
-		ghost4.setY(500);
+		ghost3.setY(400);
+		ghost4.setX(400);
+		ghost4.setY(400);
 		bomb.setX(100);
 		bomb.setY(100);
-		booster.setX(400);
-		booster.setY(400);
+		booster.setX(200);
+		booster.setY(200);
 	}
 	
 	private void Dano() {
