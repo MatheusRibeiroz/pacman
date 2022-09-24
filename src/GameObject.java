@@ -13,7 +13,7 @@ public class GameObject {
 
 
     public void setVisivel(boolean visivel) {
-        this.visivel = true;
+        this.visivel = visivel;
     }
 
     public GameObject(int TamanhodaTela, int posicaovertical, int posicaohorizontal) {
@@ -71,10 +71,9 @@ public class GameObject {
         return direcao;
     }
 
-    //Direção não pode ter valor abaixo de zero
+    //Direção tem que ter valor acima de zero
     public void setDirection(int direcao) {
         if (direcao<0) {
-            System.out.println("Essa direcao nao eh valida");
         }
         
         this.direcao = direcao;
@@ -97,12 +96,11 @@ public class GameObject {
             x -= 10;
         }
 
-        // Se os valores de x ou y forem menor que o tamanho da tela e maiores que zero então jogador podera se mover
+        // Se os valores de x ou y forem menor que o tamanho da tela e maiores que zero
         if(x > 0 && x < getScreenSize()){
             if( y > 0 && y < getScreenSize()){
                 setX(x);
                 setY(y); 
-                return true;
             }
         }
        
