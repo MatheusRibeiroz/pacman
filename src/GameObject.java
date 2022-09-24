@@ -32,8 +32,6 @@ public class GameObject {
             this.posicaohorizontal = posicaohorizontal;
             
         }
-        else
-        this.posicaohorizontal = 0;
     }
 
     public int getY() {
@@ -45,8 +43,6 @@ public class GameObject {
             this.posicaovertical = posicaovertical;
             
         }
-        else
-        this.posicaovertical = 0;
         
     }
 
