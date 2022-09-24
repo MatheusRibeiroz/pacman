@@ -28,7 +28,6 @@ public class GameObject {
 
     public void setX(int posicaohorizontal) {
         if (posicaohorizontal<0) {
-            System.out.println("Posicao horizontal fora da tela");
             this.posicaohorizontal = 0;
         }
         else
@@ -41,7 +40,6 @@ public class GameObject {
 
     public void setY(int posicaovertical) {
         if (posicaovertical<0) {
-            System.out.println("Posicao vertical fora da tela");
             this.posicaovertical = 0;
         }
         else
