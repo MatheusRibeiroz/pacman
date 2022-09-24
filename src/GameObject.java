@@ -64,13 +64,7 @@ public class GameObject {
 
     }
 
-    //Define a colisão dos obj pelos eixos x e y
-    public boolean colisao(GameObject obj){
-        if(getX() >= obj.getX() && getX() <= obj.getX() + 50 && getY() >= obj.getY() && getY() <= obj.getY() + 50){
-            return true;
-        }
-        return false;
-    }
+    
 
     
     public int getDirecao() {
