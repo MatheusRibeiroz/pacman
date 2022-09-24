@@ -3,7 +3,7 @@ public class GameObject {
     private int posicaohorizontal;
     private int posicaovertical;
     private int TamanhodaTela;
-    private boolean visivel = true;
+    private boolean visivel; //Para ver declarar aqui visivel como true
     private int direcao;
     
     public boolean isVisivel() {
