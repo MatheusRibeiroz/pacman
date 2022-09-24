@@ -15,7 +15,6 @@ public class Game extends JFrame implements KeyListener {
 	private Ghost ghost3 = new Ghost(0,500,10);
 	private Ghost ghost4 = new Ghost(500,500,10);
 	private Bomb bomb = new Bomb(100,100);
-	private Booster booster = new Booster(400, 400,(int)(Math.random()*100)+45);
 
 	private JLabel imgPlayer = new JLabel(new ImageIcon("src/images/pacman.png"));
 	private JLabel imgGhost1 = new JLabel(new ImageIcon("src/images/ghost.png"));
@@ -77,8 +76,6 @@ public class Game extends JFrame implements KeyListener {
 		updateLocation(imgGhost3, ghost3);
 		updateLocation(imgGhost4, ghost4);
 		updateLocation(imgBomb, bomb);
-		updateLocation(imgBooster, booster);
-		setTitle("Total de Vidas: " + player.getLife());
 		SwingUtilities.updateComponentTreeUI(this);
 		
 
