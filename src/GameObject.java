@@ -13,7 +13,7 @@ public class GameObject {
 
 
     public void setVisivel(boolean visivel) {
-        this.visivel = visivel;
+        this.visivel = true;
     }
 
     public GameObject(int TamanhodaTela, int posicaovertical, int posicaohorizontal) {
@@ -27,11 +27,12 @@ public class GameObject {
     }
 
     public void setX(int posicaohorizontal) {
-        if (posicaohorizontal<0) {
-            this.posicaohorizontal = 0;
+        if (posicaohorizontal>0) {
+            this.posicaohorizontal = posicaohorizontal;
+            
         }
         else
-        this.posicaohorizontal = posicaohorizontal;
+        this.posicaohorizontal = 0;
     }
 
     public int getY() {
@@ -39,11 +40,12 @@ public class GameObject {
     }
 
     public void setY(int posicaovertical) {
-        if (posicaovertical<0) {
-            this.posicaovertical = 0;
+        if (posicaovertical>0) {
+            this.posicaovertical = posicaovertical;
+            
         }
         else
-        this.posicaovertical = posicaovertical;
+        this.posicaovertical = 0;
         
     }
 
@@ -112,3 +114,4 @@ public class GameObject {
 
 
 }
+
