@@ -3,7 +3,7 @@ public class GameObject {
     private int posicaohorizontal;
     private int posicaovertical;
     private int TamanhodaTela;
-    private boolean visivel=true;
+    private boolean visivel = true;
     private int direcao;
     
     public boolean isVisivel() {
@@ -14,6 +14,7 @@ public class GameObject {
 
     public void setVisivel(boolean visivel) {
         this.visivel = visivel;
+        visivel = true;
     }
 
     public GameObject(int TamanhodaTela, int posicaovertical, int posicaohorizontal) {
@@ -112,4 +113,3 @@ public class GameObject {
 
 
 }
-
