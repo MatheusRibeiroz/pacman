@@ -9,12 +9,12 @@ import javax.swing.SwingUtilities;
 public class Game extends JFrame implements KeyListener {
 
 	private static final long serialVersionUID = 1L;
-	private Player player = new Player(75, 75, 80);
-	private Ghost ghost1 = new Ghost(10,10,10);
-	private Ghost ghost2 = new Ghost(50,0,10);
-	private Ghost ghost3 = new Ghost(0,50,10);
-	private Ghost ghost4 = new Ghost(50,50,10);
-	private Bomb bomb = new Bomb(10,10);
+	private Player player = new Player(50, 50, 180);
+	private Ghost ghost1 = new Ghost(0,0,0);
+	private Ghost ghost2 = new Ghost(500,0,0);
+	private Ghost ghost3 = new Ghost(0,500,0);
+	private Ghost ghost4 = new Ghost(500,500,0);
+	private Bomb bomb = new Bomb(100,100);
 
 	private JLabel imgPlayer = new JLabel(new ImageIcon("src/images/pacman.png"));
 	private JLabel imgGhost1 = new JLabel(new ImageIcon("src/images/ghost.png"));
@@ -157,3 +157,4 @@ public class Game extends JFrame implements KeyListener {
 	
 	
 }  
+
