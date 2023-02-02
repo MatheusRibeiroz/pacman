@@ -1,7 +1,9 @@
 public class Bomb extends Item{
 
-    public Bomb(int posicaohorizontal, int posicaovertical) {
-        super(posicaohorizontal, posicaovertical, 180);
+    public Bomb(int posicaoX, int posicaoY) {
+        super(posicaoX, posicaoY, 180); //FIXME: Definir tamanhoTela
+        //TODO Auto-generated constructor stub
     }
-  
+ 
+    
 }

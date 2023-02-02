@@ -1,9 +1,10 @@
 public class Booster extends Item {
-    
     private int turno;
     
-    public Booster(int turno, int x, int y) {
+    public Booster(int x, int y, int turno) {
         super(x, y,100); 
+
+
         this.turno = turno;
     }
 
@@ -14,5 +15,7 @@ public class Booster extends Item {
     public void setTurno(int turno) {
         this.turno = turno;
     }
+
+  
 
 }

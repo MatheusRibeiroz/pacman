@@ -1,6 +1,21 @@
 public class Item extends GameObject{
 
-    public Item(int tamanhoTela, int posicaohorizontal, int posicaovertical ) {
-        super(posicaohorizontal, posicaovertical, tamanhoTela);
-    }  
+    
+    
+    
+    
+   
+    
+
+
+
+    public Item(int posicaoX, int posicaoY, int tamanhoTela) {
+        super(posicaoX, posicaoY, tamanhoTela);
+        
+    }
+
+
+
+   
+    
 }

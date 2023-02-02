@@ -1,24 +1,23 @@
 public class Player extends GameObject
 {
-    private int Vida;
+    private int quantVidas;
+   
     private boolean invencivel;
 
-
-    public Player(int TamanhodaTela, int posicaohorizontal, int posicaovertical) {
-        super(TamanhodaTela, posicaohorizontal, posicaovertical);
+    public Player(int posicaoX, int posicaoY, int tamanhoTela) {
+        super(posicaoX, posicaoY, tamanhoTela);
     }
 
     public int getLife() {
-        return Vida;
+        return quantVidas;
     }
 
-    public void setLife(int Vida) {
-        if (Vida > 0) {
-            this.Vida = Vida;
-            
+    public void setLife(int quantVidas) {
+        if (quantVidas<1) {
+            System.out.println("Quantidade de vidas precisa ser maior que zero");
         }
         else
-            System.out.println("Voce perdeu todas as suas vidas");
+        this.quantVidas = quantVidas;
     }
 
 
@@ -31,9 +30,9 @@ public class Player extends GameObject
         this.invencivel = invencivel;
     }
 
-    public Player(int TamanhodaTela, int posicaovertical, int posicaohorizontal, int Vida, int direcao, boolean invencivel) {
-        super(posicaohorizontal, posicaovertical, TamanhodaTela);
-        this.Vida = Vida;
+    public Player(int posicaoX, int posicaoY, int tamanhoTela, int quantVidas, int direcao, boolean invencivel) {
+        super(posicaoX, posicaoY, tamanhoTela);
+        this.quantVidas = quantVidas;
         this.setDirection(direcao);
         this.invencivel = invencivel;
     }
